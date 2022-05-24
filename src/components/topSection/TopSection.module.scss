@@ -1,0 +1,72 @@
+@import '../../../styles/variables';
+
+.topSection{
+    font-size: 1.8em;
+    position: relative;
+    background-color: $darkPurple;
+
+    .h1Container{
+        position: absolute;
+        z-index: 2;
+        top: 40vh;
+        right: 2em;
+        animation: moveH1 2s ease-in-out;
+        display: grid;
+
+        @include media('mobile'){
+            right: 0.5em;
+        }
+
+        .h1{
+            font-size: 7vw;
+            grid-area: 1/1;
+        }
+        
+        .h1Grey{
+            color: $slate;
+        }
+
+        .h1White{
+            font-size: 3vw;
+            color: $lightGrey;
+        }
+
+        @keyframes moveH1 {
+            from {right: 120vw}
+            to {right: 2em}
+        }
+    }
+
+    .imgContainer{
+        //remember this parent as relative!!
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+
+        span:first-child > img{
+            z-index: 0;
+            transform: scale(1);
+            transition: transform 0.4s ease-in 0.1s;
+        }
+
+        span:last-child > img{
+            z-index: 3;
+            transform: scale(1);
+            transition: transform 0.4s ease-in 0.1s;
+        }
+    }
+
+    .imgContainerActive{
+        & > *{
+            transform: scale(0.975);
+            transition: transform 0.4s ease-in 0.1s;
+        }
+    }
+
+    .subTitleMovingUp{
+        color: $lightGrey;
+        font-size: 4vw;
+        margin: 0 5vw 0 55vw;
+        z-index: 15;
+    }
+}

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+.familySection {
+  font-size: 1.2em;
+  height: 120vh;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .familySection {
+    height: 275vh;
+  }
+}
+
+.familySection .familyContainer {
+  width: 100%;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .familySection .familyContainer {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.familySection .familyContainer .skiContainer {
+  margin: 1em;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+@media (max-width: 1024px) {
+  .familySection .familyContainer .skiContainer {
+    opacity: 1;
+  }
+}
+
+.familySection .familyContainer .skiContainer .imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.familySection .familyContainer .skiContainer h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.familySection .familyContainer .skiContainer p {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.familySection .familyContainer .skiContainer a.arrowContainer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 3em;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.familySection .familyContainer .skiContainer a.arrowContainer > img {
+  -webkit-animation: pulsate 0.8s infinite;
+          animation: pulsate 0.8s infinite;
+}
+
+@-webkit-keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+
+@keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+
+.familySection .familyContainer .skiContainerActive {
+  opacity: 1;
+  -webkit-transition: opacity 1s linear 0.75s;
+  transition: opacity 1s linear 0.75s;
+}
+
+.familySection .familyContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/images/gondels.webp") no-repeat;
+  background-size: cover;
+  opacity: 1;
+  -webkit-transition: opacity 1s linear 0.75s;
+  transition: opacity 1s linear 0.75s;
+}
+
+@media (max-width: 1024px) {
+  .familySection .familyContainer::before {
+    opacity: 0.15;
+  }
+}
+
+.familySection .familyContainerActive::before {
+  opacity: 0.15;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+/*# sourceMappingURL=Family.module.css.map */

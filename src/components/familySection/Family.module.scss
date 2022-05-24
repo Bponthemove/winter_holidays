@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+
+.familySection{
+    font-size: 1.2em;
+    height: 120vh;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include media('mobile'){
+        height: 275vh;
+    }
+    
+    .familyContainer{
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+
+        @include media('mobile'){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+        .skiContainer{
+            margin: 1em;
+            padding: 0.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 8px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s linear;
+
+            @include media('mobile'){
+                opacity: 1;
+            }
+            
+            .imgContainer{
+                position: relative;
+                width: 100%;
+                height: 100%; 
+                flex: 4;
+            }
+
+            h3{
+                flex: 1;
+            }
+
+            p{
+                flex: 5;
+            }
+
+            a.arrowContainer{
+                align-self: flex-end;
+                width: 3em;
+                bottom: 2em;
+                right: 2em;
+                cursor: pointer;
+        
+                & > img{
+                    animation: pulsate 0.8s infinite;
+                }
+        
+                @keyframes pulsate {
+                    from {width: 3em;}
+                    to {width: 3.03em;}                
+                }
+            }
+        }
+
+        .skiContainerActive{
+            opacity: 1;
+            transition: opacity 1s linear 0.75s;
+        }
+    }
+
+    .familyContainer::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url('/images/gondels.webp') no-repeat;
+        background-size: cover;
+        opacity: 1;
+        transition: opacity 1s linear 0.75s;
+
+        @include media('mobile'){
+            opacity: 0.15;
+        }
+    }
+
+    .familyContainerActive::before{
+        opacity: 0.15;
+        transition: opacity 1s linear;
+    }
+}
+
+

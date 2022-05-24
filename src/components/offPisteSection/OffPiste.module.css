@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+.offPisteSection {
+  font-size: 1.4em;
+  padding: 10vw 4vw;
+  background-color: #ff8000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14em;
+  position: relative;
+}
+
+.offPisteSection .iframeContainer {
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 315px;
+  position: relative;
+  width: 560px;
+}
+
+@media (max-width: 1024px) {
+  .offPisteSection .iframeContainer {
+    padding-top: 213px;
+    width: 380px;
+  }
+}
+
+.offPisteSection .iframeContainer iframe {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid #36454f;
+  border-radius: 4px;
+}
+
+.offPisteSection .bottomContainer {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.offPisteSection .bottomContainer .imgContainer {
+  width: 40%;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.offPisteSection .bottomContainer .textContainer {
+  width: 50%;
+  margin-left: 50%;
+  font-size: 4vw;
+  line-height: 175%;
+}
+
+.offPisteSection .bottomContainer .textContainer span {
+  color: #659b5e;
+  font-weight: 500;
+}
+
+.offPisteSection .bottomContainer .textContainer span > img {
+  width: 1.4em;
+  -webkit-transform: translate(10%, 30%);
+          transform: translate(10%, 30%);
+}
+
+.offPisteSection .arrowContainer {
+  position: absolute;
+  width: 3em;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.offPisteSection .arrowContainer > img {
+  -webkit-animation: pulsate 0.8s infinite;
+          animation: pulsate 0.8s infinite;
+}
+
+@-webkit-keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+
+@keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+
+.offPisteSection .appearingTextContainer {
+  width: 48%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 4vw;
+  line-height: 175%;
+  opacity: 0;
+}
+
+.offPisteSection .appearingTextContainer span {
+  color: #659b5e;
+  font-weight: 500;
+}
+
+.offPisteSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 30%;
+  bottom: 80%;
+  left: 0;
+  background: url("/images/k2logo.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=OffPiste.module.css.map */

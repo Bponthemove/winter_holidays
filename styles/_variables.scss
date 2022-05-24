@@ -1,0 +1,31 @@
+//colors
+//section piste
+$white : #ffffff;
+$orange: #ff8000;
+$slate: #36454f;
+$lightGrey: #e7ecef;
+$brightGreen: #b5f44a;
+$forestGreen: #659b5e;
+$brightPurple: #853a95;
+$darkPurple: #462255;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
+//mixins
+@mixin media($point) {
+    @if $point == desktop {
+      @media (min-width: 1024px)  { @content ; }
+    }
+    @else if $point == mobile {
+        @media (max-width: 1024px)  { @content ; }
+    }
+}
+
+@mixin on-hover {
+  @media (hover: hover) and (pointer: fine) {
+      &:hover {
+          @content;
+      }
+  }
+}

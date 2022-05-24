@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+.pisteSection {
+  font-size: 1.6em;
+  background-color: #e7ecef;
+  padding: 5em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pisteSection .imgContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 0.75s linear;
+  transition: opacity 0.75s linear;
+}
+
+.pisteSection .imgContainer .h2 {
+  color: #659b5e;
+  text-align: center;
+}
+
+.pisteSection .imgContainerHidden {
+  opacity: 0;
+}
+
+.pisteSection .btmContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pisteSection .btmContainer .secImgContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transform: rotate(90deg) scale(2) translate3d(0, 50%, 0);
+          transform: rotate(90deg) scale(2) translate3d(0, 50%, 0);
+  position: relative;
+  opacity: 0;
+  -webkit-transition: opacity 0.75s linear 1.5s;
+  transition: opacity 0.75s linear 1.5s;
+}
+
+.pisteSection .btmContainer .secImgContainerActive {
+  opacity: 1;
+}
+
+.pisteSection .btmContainer .textContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 3vw;
+  line-height: 175%;
+  opacity: 0;
+}
+
+.pisteSection .btmContainer .textContainer span {
+  color: #659b5e;
+}
+
+.pisteSection .btmContainer .textContainer span > img {
+  width: 1.4em;
+  -webkit-transform: translate(10%, 30%);
+          transform: translate(10%, 30%);
+}
+
+.pisteSection .btmContainer .textContainerActive {
+  opacity: 1;
+  -webkit-transition: opacity 0.75s linear 0.75s;
+  transition: opacity 0.75s linear 0.75s;
+}
+
+.pisteSection .arrowContainer > img {
+  position: absolute;
+  width: 3em;
+  bottom: 2em;
+  right: 2em;
+  -webkit-animation: pulsate 0.8s infinite;
+          animation: pulsate 0.8s infinite;
+  cursor: pointer;
+}
+
+@-webkit-keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+
+@keyframes pulsate {
+  from {
+    width: 3em;
+  }
+  to {
+    width: 3.03em;
+  }
+}
+/*# sourceMappingURL=Piste.module.css.map */

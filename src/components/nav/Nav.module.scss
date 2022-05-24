@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+
+.container{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    border-width: 0px;
+    border-color: white;
+    border-style: solid;
+    transition: border-width 0.4s ease-in 0.1s;
+    
+    .menuIcon{
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: bottom 0.4s ease-in 0.1s;
+    }
+    
+    .menuIconActive{
+        bottom: -8vh;
+        transition: bottom 0.4s ease-in 0.1s;
+    }
+
+    .nav {
+        position: absolute;
+        bottom: -15vh;
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: bottom 0.4s ease-in 0.1s;
+        
+        .links{
+            font-size: 2.8em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+            @include media('mobile'){
+                font-size: 0.8em;
+            }
+        }
+
+        .footer{
+            font-size: 1.6em;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            
+            .footerMenu{
+                font-size: 0.5em;
+                background-color: $brightGreen;
+                height: 0;
+                overflow: hidden;
+                
+                @include media('mobile'){
+                    font-size: 1.2em;
+                }
+                
+                @include on-hover{
+                    height: 25vh;
+                }
+
+                .footerMain{
+                    padding: 2em;
+                    display: flex;
+                    justify-content: space-around;
+
+                    .footerMenus{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            .footerMenuOpen{
+                height: 25vh;
+                //transition: height 0.8s ease-in-out;
+            }
+        }
+    }
+    
+    .navActive{
+        bottom: -15vh;
+        transition: bottom 0.4s ease-in 0.1s;
+    }
+}
+
+.containerActive{
+    border-width: 2vw 2vw 15vh;
+    transition: border-width 0.4s ease-in 0.1s;
+}
+
+.containerAndFooterActive{
+    border-width: 2vw 2vw 35vh;
+}
+
+.containerActive:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 1vw;
+    border-color: black;
+    border-style: solid;
+    transition: border-width 0.4s ease-in 0.1s; // not working still to fix
+}
+
+

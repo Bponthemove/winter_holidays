@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+.topSection {
+  font-size: 1.8em;
+  position: relative;
+  background-color: #462255;
+}
+
+.topSection .h1Container {
+  position: absolute;
+  z-index: 2;
+  top: 40vh;
+  right: 2em;
+  -webkit-animation: moveH1 2s ease-in-out;
+          animation: moveH1 2s ease-in-out;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .topSection .h1Container {
+    right: 0.5em;
+  }
+}
+
+.topSection .h1Container .h1 {
+  font-size: 7vw;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1;
+}
+
+.topSection .h1Container .h1Grey {
+  color: #36454f;
+}
+
+.topSection .h1Container .h1White {
+  font-size: 3vw;
+  color: #e7ecef;
+}
+
+@-webkit-keyframes moveH1 {
+  from {
+    right: 120vw;
+  }
+  to {
+    right: 2em;
+  }
+}
+
+@keyframes moveH1 {
+  from {
+    right: 120vw;
+  }
+  to {
+    right: 2em;
+  }
+}
+
+.topSection .imgContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.topSection .imgContainer span:first-child > img {
+  z-index: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s, -webkit-transform 0.4s ease-in 0.1s;
+}
+
+.topSection .imgContainer span:last-child > img {
+  z-index: 3;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s, -webkit-transform 0.4s ease-in 0.1s;
+}
+
+.topSection .imgContainerActive > * {
+  -webkit-transform: scale(0.975);
+          transform: scale(0.975);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: -webkit-transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s;
+  transition: transform 0.4s ease-in 0.1s, -webkit-transform 0.4s ease-in 0.1s;
+}
+
+.topSection .subTitleMovingUp {
+  color: #e7ecef;
+  font-size: 4vw;
+  margin: 0 5vw 0 55vw;
+  z-index: 15;
+}
+/*# sourceMappingURL=TopSection.module.css.map */

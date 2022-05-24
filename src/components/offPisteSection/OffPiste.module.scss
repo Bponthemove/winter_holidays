@@ -1,0 +1,109 @@
+@import '../../../styles/variables';
+
+.offPisteSection{
+    font-size: 1.4em;
+    padding: 10vw 4vw;
+    background-color: $orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14em;
+    position: relative;
+    
+    .iframeContainer{
+        cursor: pointer;
+        overflow: hidden;
+        padding-top: 315px;
+        position: relative;
+        width: 560px;
+
+        @include media('mobile'){
+            padding-top: 213px;
+            width: 380px;
+        }
+        
+        iframe{
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 2px solid $slate;
+            border-radius: 4px;
+        }
+    }
+
+    .bottomContainer{
+        width: 100%;
+        z-index: 1;
+        position: relative;
+
+        .imgContainer{
+            width: 40%;
+            position: absolute;
+            top: 1em;
+            left: 1em;
+        }
+
+        .textContainer{
+            width: 50%;
+            margin-left: 50%;
+            font-size: 4vw;
+            line-height: 175%;
+
+            span{
+                color: $forestGreen;
+                font-weight: 500;
+
+                > img{
+                    width: 1.4em;
+                    transform: translate(10%, 30%);
+                }
+            }
+        }
+    }
+
+    .arrowContainer{
+        position: absolute;
+        width: 3em;
+        bottom: 2em;
+        right: 2em;
+        cursor: pointer;
+
+        > img{
+            animation: pulsate 0.8s infinite;
+        }
+
+        @keyframes pulsate {
+            from {width: 3em;}
+            to {width: 3.03em;}                
+        }
+    }
+
+    .appearingTextContainer{
+        width: 48%;
+        align-self: flex-start;
+        font-size: 4vw;
+        line-height: 175%;
+        opacity: 0;
+
+        span{
+            color: $forestGreen;
+            font-weight: 500;
+        }
+    }
+}
+
+.offPisteSection::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 30%;
+    bottom: 80%;
+    left: 0;
+    background: url('/images/k2logo.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.4;
+}

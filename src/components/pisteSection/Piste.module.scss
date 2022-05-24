@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+
+.pisteSection{
+    font-size: 1.6em;
+    background-color: $lightGrey;
+    padding: 5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .imgContainer{
+        align-self: center;
+        position: relative;
+        opacity: 1;
+        transition: opacity 0.75s linear;
+
+        .h2{
+            color: $forestGreen;
+            text-align: center;
+        }
+    }
+
+    .imgContainerHidden{
+        opacity: 0;
+    }
+
+    .btmContainer{
+        display: flex;
+
+        .secImgContainer{
+            flex: 1;
+            transform: rotate(90deg) scale(2) translate3d(0, 50%, 0);
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.75s linear 1.5s;
+        }
+
+        .secImgContainerActive{
+            opacity: 1;
+        }
+
+        .textContainer{
+            flex: 1;
+            font-size: 3vw;
+            line-height: 175%;
+            opacity: 0;
+    
+            span{
+                color: $forestGreen;
+    
+                > img{
+                    width: 1.4em;
+                    transform: translate(10%, 30%);
+                }
+            }  
+        }
+        
+        .textContainerActive{
+            opacity: 1;
+            transition: opacity 0.75s linear 0.75s;
+        }
+    }
+
+    .arrowContainer{
+        > img{
+            position: absolute;
+            width: 3em;
+            bottom: 2em;
+            right: 2em;
+            animation: pulsate 0.8s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes pulsate {
+            from {width: 3em;}
+            to {width: 3.03em;}                
+        }
+    }
+}
