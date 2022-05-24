@@ -8,9 +8,7 @@ const useWindowScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(getPosition())
 
   useEffect(() => {
-    if (!isWindowAvailable) {
-      return false
-    }
+    if (!isWindowAvailable) return;    
 
     const handleScroll = () => {
       setScrollPosition(getPosition())
