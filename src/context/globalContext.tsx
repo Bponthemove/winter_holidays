@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useRef } from "react";
+import React, { createContext, useState, useRef, PropsWithChildren } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import useMediaQuery from "../hooks/useMediaQuery";
 import useScroll from '../hooks/useScroll';
@@ -14,10 +14,9 @@ type ProviderProps = {
     gondelBtmVis: IntersectionObserverEntry | undefined
 };
 
-
 export const GlobalContext = createContext<ProviderProps | undefined>(undefined);
 
-export const GlobalContextProvider: React.FC = ({ children }) => {
+export const GlobalContextProvider:React.FC = ({ children }: PropsWithChildren<{}>) => {
     const desktop = useMediaQuery('(min-width: 1024px)');
     const mobile = useMediaQuery('(max-width: 1024px)');
     const scroll = useScroll();
@@ -25,7 +24,6 @@ export const GlobalContextProvider: React.FC = ({ children }) => {
     const gondelRef = useRef(null)
     const gondelTopVis = useIntersectionObserver(gondelRef, {})
     const gondelBtmVis = useIntersectionObserver(gondelRef, {rootMargin: '0% 0% -90% 0%'})
-
 
     const value: ProviderProps = {
         desktop, mobile, menu, openMenu, scroll, gondelRef, gondelTopVis, gondelBtmVis
