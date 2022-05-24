@@ -16,7 +16,7 @@ type ProviderProps = {
 
 export const GlobalContext = createContext<ProviderProps | undefined>(undefined);
 
-export const GlobalContextProvider:React.FC = ({ children }: PropsWithChildren<{}>) => {
+export const GlobalContextProvider = ({ children }: PropsWithChildren<{}>) => {
     const desktop = useMediaQuery('(min-width: 1024px)');
     const mobile = useMediaQuery('(max-width: 1024px)');
     const scroll = useScroll();
