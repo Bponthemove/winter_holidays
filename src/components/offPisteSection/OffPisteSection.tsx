@@ -21,7 +21,7 @@ export const OffPisteSection = () => {
 
   useEffect(() => {
     if (scroll === undefined || videoLocked) return;
-    if(video?.isIntersecting) setVideoLocked(true)
+    if(video?.isIntersecting) setVideoLocked(!videoLocked)
   }, [scroll, videoLocked, video])
 
   useEffect(() => {
@@ -52,11 +52,12 @@ export const OffPisteSection = () => {
         {
           videoLocked &&
           <iframe 
-            width={desktop ? "560" : '380'} 
+            width={desktop ? "800" : '450'} 
             height={desktop ? "315" : '213'}
-            src="https://www.youtube.com/embed/h33C8LH6yqI?controls=0&showinfo=0" 
+            src="https://www.youtube.com/embed/h33C8LH6yqI?controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=h33C8LH6yqI" 
             title="YouTube video player" 
-            allow="accelerometer; modestbranding; encrypted-media; gyroscope; picture-in-picture, autoplay"
+            //allow="accelerometer; modestbranding; encrypted-media; gyroscope; picture-in-picture"
+            onAnimationEnd={e => console.log(e)}
           />        
         }
       </div>

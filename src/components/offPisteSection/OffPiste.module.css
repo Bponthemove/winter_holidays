@@ -20,9 +20,9 @@
 .offPisteSection .iframeContainer {
   cursor: pointer;
   overflow: hidden;
-  padding-top: 315px;
+  padding-top: 450px;
   position: relative;
-  width: 560px;
+  width: 800px;
 }
 
 @media (max-width: 1024px) {
