@@ -9,14 +9,9 @@
         position: absolute;
         z-index: 2;
         top: 40vh;
-        right: 2em;
-        animation: moveH1 2s ease-in-out;
+        right: 120vw;
         display: grid;
-
-        @include media('mobile'){
-            right: 0.5em;
-        }
-
+        
         .h1{
             font-size: 7vw;
             grid-area: 1/1;
@@ -25,15 +20,30 @@
         .h1Grey{
             color: $slate;
         }
-
+        
         .h1White{
             font-size: 3vw;
             color: $lightGrey;
         }
+    }
+    
+    .h1ContainerAnimate{
+        animation: moveH1Desktop 1.2s ease-in-out 0.2s;
+        animation-fill-mode: forwards;
 
-        @keyframes moveH1 {
+        @include media('mobile'){
+            animation: moveH1Mobile 1.2s ease-in-out 0.2s;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes moveH1Desktop {
             from {right: 120vw}
             to {right: 2em}
+        }
+
+        @keyframes moveH1Mobile {
+            from {right: 120vw}
+            to {right: 0.5em}
         }
     }
 

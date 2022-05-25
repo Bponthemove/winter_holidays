@@ -9,17 +9,9 @@
   position: absolute;
   z-index: 2;
   top: 40vh;
-  right: 2em;
-  -webkit-animation: moveH1 2s ease-in-out;
-          animation: moveH1 2s ease-in-out;
+  right: 120vw;
   display: -ms-grid;
   display: grid;
-}
-
-@media (max-width: 1024px) {
-  .topSection .h1Container {
-    right: 0.5em;
-  }
 }
 
 .topSection .h1Container .h1 {
@@ -38,7 +30,23 @@
   color: #e7ecef;
 }
 
-@-webkit-keyframes moveH1 {
+.topSection .h1ContainerAnimate {
+  -webkit-animation: moveH1Desktop 1.2s ease-in-out 0.2s;
+          animation: moveH1Desktop 1.2s ease-in-out 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (max-width: 1024px) {
+  .topSection .h1ContainerAnimate {
+    -webkit-animation: moveH1Mobile 1.2s ease-in-out 0.2s;
+            animation: moveH1Mobile 1.2s ease-in-out 0.2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@-webkit-keyframes moveH1Desktop {
   from {
     right: 120vw;
   }
@@ -47,12 +55,30 @@
   }
 }
 
-@keyframes moveH1 {
+@keyframes moveH1Desktop {
   from {
     right: 120vw;
   }
   to {
     right: 2em;
+  }
+}
+
+@-webkit-keyframes moveH1Mobile {
+  from {
+    right: 120vw;
+  }
+  to {
+    right: 0.5em;
+  }
+}
+
+@keyframes moveH1Mobile {
+  from {
+    right: 120vw;
+  }
+  to {
+    right: 0.5em;
   }
 }
 

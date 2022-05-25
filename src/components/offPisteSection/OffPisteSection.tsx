@@ -56,7 +56,7 @@ export const OffPisteSection = () => {
             height={desktop ? "315" : '213'}
             src="https://www.youtube.com/embed/h33C8LH6yqI?controls=0&showinfo=0" 
             title="YouTube video player" 
-            allow="accelerometer; modestbranding; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; modestbranding; encrypted-media; gyroscope; picture-in-picture, autoplay"
           />        
         }
       </div>
