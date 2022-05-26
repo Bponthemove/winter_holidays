@@ -2,7 +2,7 @@
 
 .offPisteSection{
     font-size: 1.4em;
-    padding: 10vw 4vw;
+    padding: 10vw 0 0;
     background-color: $orange;
     display: flex;
     flex-direction: column;
@@ -42,8 +42,10 @@
         .imgContainer{
             width: 40%;
             position: absolute;
-            top: 1em;
+            top:-3em;
             left: 1em;
+            transform: scale(0.75);
+            z-index: 5;
         }
 
         .textContainer{
@@ -81,16 +83,35 @@
         }
     }
 
-    .appearingTextContainer{
-        width: 48%;
-        align-self: flex-start;
-        font-size: 4vw;
-        line-height: 175%;
-        opacity: 0;
+    .appearingContainer{
+        width: 100%;
+        display: grid;
+        
+        .appearingImgContainer{
+            height: 110vh;
+            position: relative;
+            grid-area: 1/1;
+        }
+        
+        .appearingImgContainerFront{
+            height: 100%;
+            
+            img{
+                mask-image: var(--mask);
+            }
 
-        span{
-            color: $forestGreen;
-            font-weight: 500;
+            .appearingTextContainer{
+                width: 48%;
+                margin: 10% 0 0 2%;
+                font-size: 3.2vw;
+                line-height: 150%;
+                opacity: 1;            
+                
+                span{
+                    color: $forestGreen;
+                    font-weight: 500;
+                }
+            }
         }
     }
 }

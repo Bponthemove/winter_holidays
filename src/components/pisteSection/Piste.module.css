@@ -19,8 +19,8 @@
       align-self: center;
   position: relative;
   opacity: 1;
-  -webkit-transition: opacity 0.75s linear;
-  transition: opacity 0.75s linear;
+  -webkit-transition: opacity 0.35s linear;
+  transition: opacity 0.35s linear;
 }
 
 .pisteSection .imgContainer .h2 {
@@ -46,8 +46,8 @@
           transform: rotate(90deg) scale(2) translate3d(0, 50%, 0);
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 0.75s linear 1.5s;
-  transition: opacity 0.75s linear 1.5s;
+  -webkit-transition: opacity 0.35s linear 0.7s;
+  transition: opacity 0.35s linear 0.7s;
 }
 
 .pisteSection .btmContainer .secImgContainerActive {
@@ -75,8 +75,8 @@
 
 .pisteSection .btmContainer .textContainerActive {
   opacity: 1;
-  -webkit-transition: opacity 0.75s linear 0.75s;
-  transition: opacity 0.75s linear 0.75s;
+  -webkit-transition: opacity 0.35s linear 0.35s;
+  transition: opacity 0.35s linear 0.35s;
 }
 
 .pisteSection .arrowContainer > img {

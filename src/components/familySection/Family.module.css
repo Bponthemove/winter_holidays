@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 .familySection {
   font-size: 1.2em;
-  height: 120vh;
+  height: 0;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,5 +148,9 @@
   opacity: 0.15;
   -webkit-transition: opacity 1s linear;
   transition: opacity 1s linear;
+}
+
+.familySectionActive {
+  height: 120vh;
 }
 /*# sourceMappingURL=Family.module.css.map */

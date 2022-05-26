@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 .offPisteSection {
   font-size: 1.4em;
-  padding: 10vw 4vw;
+  padding: 10vw 0 0;
   background-color: #ff8000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,8 +52,11 @@
 .offPisteSection .bottomContainer .imgContainer {
   width: 40%;
   position: absolute;
-  top: 1em;
+  top: -3em;
   left: 1em;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  z-index: 5;
 }
 
 .offPisteSection .bottomContainer .textContainer {
@@ -105,16 +108,38 @@
   }
 }
 
-.offPisteSection .appearingTextContainer {
-  width: 48%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 4vw;
-  line-height: 175%;
-  opacity: 0;
+.offPisteSection .appearingContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
 }
 
-.offPisteSection .appearingTextContainer span {
+.offPisteSection .appearingContainer .appearingImgContainer {
+  height: 110vh;
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1;
+}
+
+.offPisteSection .appearingContainer .appearingImgContainerFront {
+  height: 100%;
+}
+
+.offPisteSection .appearingContainer .appearingImgContainerFront img {
+  -webkit-mask-image: var(--mask);
+          mask-image: var(--mask);
+}
+
+.offPisteSection .appearingContainer .appearingImgContainerFront .appearingTextContainer {
+  width: 48%;
+  margin: 10% 0 0 2%;
+  font-size: 3.2vw;
+  line-height: 150%;
+  opacity: 1;
+}
+
+.offPisteSection .appearingContainer .appearingImgContainerFront .appearingTextContainer span {
   color: #659b5e;
   font-weight: 500;
 }

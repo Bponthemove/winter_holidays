@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { KidsSki } from './KidsSki'
 import useGlobalContext from '../../hooks/useGlobalContext'
 import styles from './Family.module.css'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 
 export const FamilySection = () => {
-  const {gondelRef, gondelTopVis, gondelBtmVis, desktop} = useGlobalContext()
+  const {gondelRef, desktop, familySection} = useGlobalContext()
+  const gondelTopVis = useIntersectionObserver(gondelRef, {})
+  const gondelBtmVis = useIntersectionObserver(gondelRef, {rootMargin: '0% 0% -90% 0%'})
 
   return (
     <section 
-      className={ styles.familySection }
+      className={familySection ?  [styles.familySection, styles.familySectionActive].join(' ') : styles.familySection}
       ref={gondelRef}
     >
       {gondelTopVis?.isIntersecting && 

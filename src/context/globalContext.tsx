@@ -10,8 +10,8 @@ type ProviderProps = {
     openMenu: React.Dispatch<React.SetStateAction<boolean>>
     scroll: number | undefined
     gondelRef: React.RefObject<HTMLDivElement>
-    gondelTopVis: IntersectionObserverEntry | undefined
-    gondelBtmVis: IntersectionObserverEntry | undefined
+    familySection: boolean
+    openFamilySection: React.Dispatch<React.SetStateAction<boolean>>
 };
 
 export const GlobalContext = createContext<ProviderProps | undefined>(undefined);
@@ -21,12 +21,11 @@ export const GlobalContextProvider = ({ children }: PropsWithChildren<{}>) => {
     const mobile = useMediaQuery('(max-width: 1024px)');
     const scroll = useScroll();
     const [menu, openMenu] = useState<boolean>(false);
+    const [familySection, openFamilySection] = useState(false);
     const gondelRef = useRef(null)
-    const gondelTopVis = useIntersectionObserver(gondelRef, {})
-    const gondelBtmVis = useIntersectionObserver(gondelRef, {rootMargin: '0% 0% -90% 0%'})
 
     const value: ProviderProps = {
-        desktop, mobile, menu, openMenu, scroll, gondelRef, gondelTopVis, gondelBtmVis
+        desktop, mobile, menu, openMenu, scroll, gondelRef, openFamilySection, familySection
     };
 
     return (

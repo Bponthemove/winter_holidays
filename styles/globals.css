@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Prompt, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --mask: linear-gradient(to top, transparent 100%, black);
 }
 
 a {

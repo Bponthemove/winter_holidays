@@ -12,7 +12,7 @@
         align-self: center;
         position: relative;
         opacity: 1;
-        transition: opacity 0.75s linear;
+        transition: opacity 0.35s linear;
 
         .h2{
             color: $forestGreen;
@@ -32,7 +32,7 @@
             transform: rotate(90deg) scale(2) translate3d(0, 50%, 0);
             position: relative;
             opacity: 0;
-            transition: opacity 0.75s linear 1.5s;
+            transition: opacity 0.35s linear 0.7s;
         }
 
         .secImgContainerActive{
@@ -57,7 +57,7 @@
         
         .textContainerActive{
             opacity: 1;
-            transition: opacity 0.75s linear 0.75s;
+            transition: opacity 0.35s linear 0.35s;
         }
     }
 
