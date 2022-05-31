@@ -5,12 +5,7 @@
     height: 0;
     background-color: $white;
     display: flex;
-    align-items: center;
     position: relative;
-
-    @include media('mobile'){
-        height: 275vh;
-    }
     
     .familyContainer{
         width: 100%;
@@ -20,6 +15,9 @@
         
 
         @include media('mobile'){
+            gap: 2em;
+            padding: 3vw;
+            height: 100%;
             grid-template-columns: repeat(1, 1fr);
         }
         
@@ -56,10 +54,10 @@
             }
 
             a.arrowContainer{
+                margin: 1em;
                 align-self: flex-end;
+                height: 3em;
                 width: 3em;
-                bottom: 2em;
-                right: 2em;
                 cursor: pointer;
         
                 & > img{
@@ -104,6 +102,10 @@
 
 .familySectionActive{
     height: 120vh;
+
+    @include media('mobile'){
+        height: 275vh;
+    }
 }
 
 

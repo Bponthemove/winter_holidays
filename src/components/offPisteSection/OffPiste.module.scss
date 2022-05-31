@@ -1,6 +1,7 @@
 @import '../../../styles/variables';
 
 .offPisteSection{
+    width: 100%;
     font-size: 1.4em;
     padding: 10vw 0 0;
     background-color: $orange;
@@ -13,14 +14,9 @@
     .iframeContainer{
         cursor: pointer;
         overflow: hidden;
-        padding-top: 450px;
+        padding-top: 45.20%;
         position: relative;
-        width: 800px;
-
-        @include media('mobile'){
-            padding-top: 213px;
-            width: 380px;
-        }
+        width: 80%;
         
         iframe{
             position: absolute;
@@ -46,13 +42,25 @@
             left: 1em;
             transform: scale(0.75);
             z-index: 5;
+
+            @include media('mobile'){
+                transform: scale(0.9);
+                top: 60%;
+                left: 0;
+            }
         }
+
 
         .textContainer{
             width: 50%;
             margin-left: 50%;
             font-size: 4vw;
             line-height: 175%;
+
+            @include media('mobile'){
+                margin-left: 40%;
+                font-size: 6vw;
+            }
 
             span{
                 color: $forestGreen;
@@ -91,6 +99,10 @@
             height: 110vh;
             position: relative;
             grid-area: 1/1;
+
+            @include media('mobile'){
+                height: 105vh;
+            }
         }
         
         .appearingImgContainerFront{
@@ -105,7 +117,12 @@
                 margin: 10% 0 0 2%;
                 font-size: 3.2vw;
                 line-height: 150%;
-                opacity: 1;            
+                opacity: 1;     
+                
+                @include media('mobile'){
+                    font-size: 5vw;
+                    line-height: 175%;
+                }
                 
                 span{
                     color: $forestGreen;
@@ -127,4 +144,10 @@
     background-size: contain;
     background-position: center;
     opacity: 0.4;
+
+    @include media('mobile'){
+        top: 5%;
+        right: 15%;
+        bottom: 70%;
+    }
 }

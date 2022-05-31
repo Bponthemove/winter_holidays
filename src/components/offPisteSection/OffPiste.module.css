@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 .offPisteSection {
+  width: 100%;
   font-size: 1.4em;
   padding: 10vw 0 0;
   background-color: #ff8000;
@@ -20,16 +21,9 @@
 .offPisteSection .iframeContainer {
   cursor: pointer;
   overflow: hidden;
-  padding-top: 450px;
+  padding-top: 45.20%;
   position: relative;
-  width: 800px;
-}
-
-@media (max-width: 1024px) {
-  .offPisteSection .iframeContainer {
-    padding-top: 213px;
-    width: 380px;
-  }
+  width: 80%;
 }
 
 .offPisteSection .iframeContainer iframe {
@@ -59,11 +53,27 @@
   z-index: 5;
 }
 
+@media (max-width: 1024px) {
+  .offPisteSection .bottomContainer .imgContainer {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    top: 60%;
+    left: 0;
+  }
+}
+
 .offPisteSection .bottomContainer .textContainer {
   width: 50%;
   margin-left: 50%;
   font-size: 4vw;
   line-height: 175%;
+}
+
+@media (max-width: 1024px) {
+  .offPisteSection .bottomContainer .textContainer {
+    margin-left: 40%;
+    font-size: 6vw;
+  }
 }
 
 .offPisteSection .bottomContainer .textContainer span {
@@ -122,6 +132,12 @@
   grid-area: 1/1;
 }
 
+@media (max-width: 1024px) {
+  .offPisteSection .appearingContainer .appearingImgContainer {
+    height: 105vh;
+  }
+}
+
 .offPisteSection .appearingContainer .appearingImgContainerFront {
   height: 100%;
 }
@@ -137,6 +153,13 @@
   font-size: 3.2vw;
   line-height: 150%;
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .offPisteSection .appearingContainer .appearingImgContainerFront .appearingTextContainer {
+    font-size: 5vw;
+    line-height: 175%;
+  }
 }
 
 .offPisteSection .appearingContainer .appearingImgContainerFront .appearingTextContainer span {
@@ -155,5 +178,13 @@
   background-size: contain;
   background-position: center;
   opacity: 0.4;
+}
+
+@media (max-width: 1024px) {
+  .offPisteSection::before {
+    top: 5%;
+    right: 15%;
+    bottom: 70%;
+  }
 }
 /*# sourceMappingURL=OffPiste.module.css.map */

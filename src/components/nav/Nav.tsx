@@ -25,18 +25,18 @@ export const Nav = () => {
             onMouseLeave={() => openMenu(false)}
       >
         <div className={styles.links}>
-          <div>
+          <a href='#'>
             Home
-          </div>
-          <div>
+          </a>
+          <a href='#'>
             all mountain
-          </div>
-          <div>
+          </a>
+          <a href='#'>
             helmets
-          </div>
-          <div>
+          </a>
+          <a href='#'>
             Kids
-          </div>
+          </a>
         </div>
         <footer 
           className={styles.footer}
